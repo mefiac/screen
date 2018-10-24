@@ -26,7 +26,7 @@ class Capture
      *
      * @var string
      */
-    protected $url;
+    public $url;
 
     /**
      * dom element top position
@@ -336,7 +336,8 @@ class Capture
      */
     public function setUrl($url)
     {
-        $this->url = new Url($url);
+         $urlModel= new Url($url);
+         $this->url =$urlModel->getUrl();
     }
 
     /**
